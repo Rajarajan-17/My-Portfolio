@@ -1,0 +1,147 @@
+/* Navbar Styling */
+.navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0.3s ease-in-out;
+}
+/* Glowing Effect */
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.8);
+}
+ /* Mobile Navbar */
+ .mobile-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #3a0d2e;
+    padding-top: 50px;
+    transition: 0.5s;
+    z-index: 1001;
+}
+
+.side-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* Fix About Section Position */
+.about-section {
+    padding-top: 100px;
+    margin-bottom: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Glowing & Hover Animation */
+.about-text p {
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.about-text p:hover {
+    color: #ffcc00;
+    text-shadow: 0px 0px 10px #ffcc00;
+}
+
+/* Education Section */
+.education-section {
+    margin-top: 50px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.education-section h4 {
+    font-size: 28px;
+    color: darkorange;
+    text-shadow: 0px 0px 8px darkorange;
+}
+
+/* Image Styling */
+.about-img, .education-img {
+    height: 350px;
+    width: 350px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.about-img:hover, .education-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}

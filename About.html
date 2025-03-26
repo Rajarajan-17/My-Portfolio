@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="About.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* General Styling */
+        body {
+            background-color: #76215a;
+            color: white;
+            overflow-x: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar-custom">
+    <h2>About</h2>
+    <div class="nav-links">
+        <a href="http://127.0.0.1:5500/home.html">Home</a>
+        <a href="http://127.0.0.1:5500/About.html">About</a>
+        <a href="http://127.0.0.1:5500/Skill.html">Skill</a>
+        <a href="#">Contact</a>
+    </div>
+    <span class="mobile-menu" onclick="openMenu()">☰</span>
+</div>
+
+<!-- Sidebar (Mobile Menu) -->
+<div class="side-menu" id="sideMenu">
+    <span class="close-btn" onclick="closeMenu()">×</span>
+    <a href="http://127.0.0.1:5500/home.html">Home</a>
+    <a href="http://127.0.0.1:5500/About.html">About</a>
+    <a href="http://127.0.0.1:5500/Skill.html">Skill</a>
+    <a href="http://127.0.0.1:5500/Contact.html">Contact</a>
+</div>
+
+<!-- About Section -->
+<div class="about-section container mt-5">
+    <div class="row">
+        <div class="col-md-5 text-center">
+            <img src="about img.jpg" class="about-img" alt="">
+        </div>
+        <div class="col-md-7 about-text">
+            <p>👋 <strong>Hi, I'm Rajarajan!</strong><br>
+                I am a Developer passionate about building efficient, scalable, and secure applications. With a strong foundation in Java, Spring Framework, and Full-Stack Development, I am constantly improving my skills to create impactful software solutions.
+            </p>
+            <p>💡 <strong>What I Do:</strong><br>
+                🔹 Backend Development with Java & Spring Framework<br>
+                🔹 Database Management (MySQL)<br>
+                🔹 Web Development (HTML, CSS, JavaScript, Bootstrap)<br>
+                🔹 Problem-Solving & Debugging
+            </p>
+            <p>🎯 <strong>Career Goal:</strong><br>
+                I am looking for a challenging role where I can apply my skills, learn new technologies, and contribute to an organization’s growth.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Education Section -->
+<div class="education-section container">
+    <h4>Education</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong>📍 Rajah Serfoji Government College, Thanjavur<br>
+                🎓 Bachelor of Science in Computer Science<br>
+                Graduated with 75.18% (CGPA: 8.0)</strong>
+            </p>
+            <p><strong>📍 St. Antony's Higher Secondary School, Thanjavur<br>
+                🎓 Higher Secondary Education</strong><br>
+                Completed with 76.5%
+            </p>
+            <p><strong>📍 Little Scholars Matric Higher Secondary School, Thanjavur<br>
+                🎓 SSLC<br>
+                Completed with 75.8%</strong>
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="about.img2.jpg" class="education-img" alt="">
+        </div>
+    </div>
+</div> <br>
+
+ <!-- JavaScript for Side Menu -->
+ <script>
+    function openMenu() {
+        document.getElementById("sideMenu").style.left = "0";
+    }
+
+    function closeMenu() {
+        document.getElementById("sideMenu").style.left = "-250px";
+    }
+</script>
+
+
+</body>
+</html>
