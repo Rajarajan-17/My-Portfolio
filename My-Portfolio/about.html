@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <style>
+        /* General Styling */
+        body {
+            background-color: #76215a;
+            color: white;
+            overflow-x: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+        /* Navbar Styling */
+.navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0.3s ease-in-out;
+}
+/* Glowing Effect */
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.8);
+}
+ /* Mobile Navbar */
+ .mobile-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #3a0d2e;
+    padding-top: 50px;
+    transition: 0.5s;
+    z-index: 1001;
+}
+
+.side-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* Fix About Section Position */
+.about-section {
+    padding-top: 100px;
+    margin-bottom: 50px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Glowing & Hover Animation */
+.about-text p {
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.about-text p:hover {
+    color: #ffcc00;
+    text-shadow: 0px 0px 10px #ffcc00;
+}
+
+/* Education Section */
+.education-section {
+    margin-top: 50px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.3);
+    text-align: center;
+    animation: slideIn 1.5s ease-in-out;
+}
+
+.education-section h4 {
+    font-size: 28px;
+    color: darkorange;
+    text-shadow: 0px 0px 8px darkorange;
+}
+
+/* Image Styling */
+.about-img, .education-img {
+    height: 350px;
+    width: 350px;
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    transition: 0.3s ease-in-out;
+}
+
+.about-img:hover, .education-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 25px rgba(255, 255, 255, 0.7);
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateX(-50px); }
+    to { opacity: 1; transform: translateX(0); }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+}
+
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<div class="navbar-custom">
+    <h2>About</h2>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skill.html">Skill</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <span class="mobile-menu" onclick="openMenu()">☰</span>
+</div>
+
+<!-- Sidebar (Mobile Menu) -->
+<div class="side-menu" id="sideMenu">
+    <span class="close-btn" onclick="closeMenu()">×</span>
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="skill.html">Skill</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+<!-- About Section -->
+<div class="about-section container mt-5">
+    <div class="row">
+        <div class="col-md-5 text-center">
+            <img src="about img.jpg" class="about-img" alt="">
+        </div>
+        <div class="col-md-7 about-text">
+            <p>👋 <strong>Hi, I'm Rajarajan!</strong><br>
+                I am a Developer passionate about building efficient, scalable, and secure applications. With a strong foundation in Java, Spring Framework, and Full-Stack Development, I am constantly improving my skills to create impactful software solutions.
+            </p>
+            <p>💡 <strong>What I Do:</strong><br>
+                🔹 Backend Development with Java & Spring Framework<br>
+                🔹 Database Management (MySQL)<br>
+                🔹 Web Development (HTML, CSS, JavaScript, Bootstrap)<br>
+                🔹 Problem-Solving & Debugging
+            </p>
+            <p>🎯 <strong>Career Goal:</strong><br>
+                I am looking for a challenging role where I can apply my skills, learn new technologies, and contribute to an organization’s growth.
+            </p>
+        </div>
+    </div>
+</div>
+
+<!-- Education Section -->
+<div class="education-section container">
+    <h4>Education</h4>
+    <div class="row">
+        <div class="col-md-6">
+            <p><strong>📍 Rajah Serfoji Government College, Thanjavur<br>
+                🎓 Bachelor of Science in Computer Science<br>
+                Graduated with 75.18% (CGPA: 8.0)</strong>
+            </p>
+            <p><strong>📍 St. Antony's Higher Secondary School, Thanjavur<br>
+                🎓 Higher Secondary Education</strong><br>
+                Completed with 76.5%
+            </p>
+            <p><strong>📍 Little Scholars Matric Higher Secondary School, Thanjavur<br>
+                🎓 SSLC<br>
+                Completed with 75.8%</strong>
+            </p>
+        </div>
+        <div class="col-md-6 text-center">
+            <img src="about.img2.jpg" class="education-img" alt="">
+        </div>
+    </div>
+</div> <br>
+
+ <!-- JavaScript for Side Menu -->
+ <script>
+    function openMenu() {
+        document.getElementById("sideMenu").style.left = "0";
+    }
+
+    function closeMenu() {
+        document.getElementById("sideMenu").style.left = "-250px";
+    }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

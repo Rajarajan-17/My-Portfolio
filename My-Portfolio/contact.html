@@ -1,0 +1,265 @@
+<!DOCTYPE html>  
+<html lang="en">  
+<head>  
+    <meta charset="UTF-8">  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+    
+    <title>Contact | Rajarajan</title>  
+  
+    <!-- Bootstrap CSS -->  
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">  
+  
+    <!-- Google Fonts -->  
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Orbitron:wght@400;700&display=swap" rel="stylesheet">  
+  
+    <style>  
+      
+       /* General Styling */
+       body {
+            background-color: #76215a;
+            color: white;
+            overflow-x: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+        /* Navbar Styling */
+.navbar-custom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5));
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.2);
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+    text-shadow: 0.3s ease-in-out;
+}
+/* Glowing Effect */
+.nav-links a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.8);
+}
+ /* Mobile Navbar */
+ .mobile-menu {
+    display: none;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.side-menu {
+    position: fixed;
+    left: -250px;
+    top: 0;
+    width: 250px;
+    height: 100%;
+    background-color: #3a0d2e;
+    padding-top: 50px;
+    transition: 0.5s;
+    z-index: 1001;
+}
+
+.side-menu a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    transition: 0.3s;
+}
+
+.side-menu a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.8);
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.9);
+}
+
+.close-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* Contact Card */  
+.contact-card {  
+    background: rgba(255, 255, 255, 0.1);  
+    backdrop-filter: blur(10px);  
+    border-radius: 15px;  
+    padding: 30px;  
+    width: 90%;  
+    max-width: 500px;  
+    margin: 150px auto;  
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.1);  
+    text-align: center;  
+    animation: fadeIn 1.5s ease-in-out;  
+}  
+
+@keyframes fadeIn {  
+    from { opacity: 0; transform: translateY(-30px); }  
+    to { opacity: 1; transform: translateY(0); }  
+}  
+
+/* Unique Email Style */  
+.email-box {  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    gap: 10px;  
+    background: rgba(0, 255, 255, 0.2);  
+    padding: 15px;  
+    border-radius: 10px;  
+    transition: 0.3s ease-in-out;  
+    margin: 10px 0;  
+    cursor: pointer;  
+    position: relative;  
+    overflow: hidden;  
+}  
+
+.email-box:hover {  
+    background: rgba(0, 255, 255, 0.5);  
+    box-shadow: 0px 0px 15px rgba(0, 255, 255, 0.7);  
+}  
+
+.email-box img {  
+    width: 24px;  
+    height: 24px;  
+}  
+
+.email-box a {  
+    text-decoration: none;  
+    font-weight: bold;  
+    color: cyan;  
+    font-size: 16px;  
+}  
+
+.email-box a:hover {  
+    color: white;  
+}  
+
+/* Social Media Icons */  
+.social-icons {  
+    display: flex;  
+    justify-content: center;  
+    gap: 15px;  
+    margin-top: 20px;  
+}  
+
+.social-icons a {  
+    width: 50px;  
+    height: 50px;  
+    display: flex;  
+    align-items: center;  
+    justify-content: center;  
+    background: rgba(255, 255, 255, 0.1);  
+    border-radius: 50%;  
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;  
+    position: relative;  
+    overflow: hidden;  
+}  
+
+.social-icons a img {  
+    width: 30px;  
+    height: 30px;  
+}  
+
+.social-icons a:hover {  
+    transform: rotate(360deg) scale(1.2);  
+    box-shadow: 0px 0px 20px rgba(255, 255, 255, 0.8);  
+} 
+   /* Responsive */
+   @media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+} 
+    </style>  
+</head>  
+<body>  
+  
+    
+    <!-- Navbar -->
+    <div class="navbar-custom">
+        <h2>Contact</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skill.html">Skill</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <span class="mobile-menu" onclick="openMenu()">☰</span>
+    </div>
+
+    <!-- Sidebar (Mobile Menu) -->
+    <div class="side-menu" id="sideMenu">
+        <span class="close-btn" onclick="closeMenu()">×</span>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="skill.html">Skill</a>
+        <a href="contact.html">Contact</a>
+    </div>
+
+
+  
+    <!-- Contact Section -->  
+    <div class="contact-card">  
+        <h2 style="color: cyan;">Let's Connect!</h2>  
+        <h4>Rajarajan</h4>  
+  
+        <p><img src="mobilno.png" style="width: 20px; height: 20px;" alt=""> 9345318845</p>  
+
+        <div class="email-box">  
+            <img src="email.png" alt="">  
+            <a href="mailto:gokulmass36@gmail.com">gokulmass36@gmail.com</a>  
+        </div>  
+
+        <div class="email-box">  
+            <img src="email.png" alt="">  
+            <a href="mailto:rajarajan170703@gmail.com">rajarajan170703@gmail.com</a>  
+        </div>  
+
+        <!-- Social Media Icons -->  
+        <div class="social-icons">  
+            <a href="https://www.linkedin.com/in/rajarajan03"><img src="linkedin.png" alt="LinkedIn"></a>  
+            <a href="https://github.com/Rajarajan-17"><img src="github.png" alt="GitHub"></a>  
+        </div>  
+    </div>  
+
+     <!-- JavaScript for Side Menu -->
+ <script>
+    function openMenu() {
+        document.getElementById("sideMenu").style.left = "0";
+    }
+
+    function closeMenu() {
+        document.getElementById("sideMenu").style.left = "-250px";
+    }
+</script>
+
+
+    <!-- Bootstrap JS -->  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>  
+  
+</body>  
+</html>
